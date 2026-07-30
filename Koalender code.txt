@@ -1,0 +1,6 @@
+<!-- Koalendar Link Widget Start -->
+<script>window.Koalendar=window.Koalendar||function(){(Koalendar.props=Koalendar.props||[]).push(arguments)};</script>
+<script async src="https://koalendar.com/assets/widget.js"></script>
+<script>Koalendar('init');</script>
+<a href="https://koalendar.com/e/meet-with-manav-capital-group" data-koalendar-widget data-koa-type="link" style="font-weight: 500; color: #5145CD">Schedule a meeting</a>
+<!-- Koalendar Link Widget End -->
