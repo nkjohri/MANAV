@@ -1,0 +1,127 @@
+
+element.style {
+}
+.final-cta {
+    background: var(--ink);
+    color: var(--canvas);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: clamp(5rem, 9vw, 8rem) 0;
+}
+section {
+* {
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+user agent stylesheet
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+body {
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--canvas);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    font-feature-settings: "ss01", "cv01", "cv11";
+}
+style attribute {
+    --app-height: 607px;
+    --ink: #0a1628;
+    --ink-soft: #1f2a3d;
+    --ink-mute: #5a6478;
+    --ink-line: #3a4458;
+    --canvas: #f5f1e8;
+    --canvas-deep: #ecdfca;
+    --canvas-light: #faf8f3;
+    --paper: #fbf8f0;
+    --gold: #b8924c;
+    --gold-deep: #8b6a36;
+    --gold-soft: #d4b87a;
+    --copper: #a86b3c;
+    --rule: #d4cdb8;
+    --rule-soft: #e8e2d2;
+    --rule-dark: #2a3650;
+    --ok: #4a7c59;
+    --warn: #a8460b;
+    --notif-bar-bg: #0a1628;
+    --display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Outfit', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+:root {
+    --ink: #0a1628;
+    --ink-soft: #1f2a3d;
+    --ink-mute: #5a6478;
+    --ink-line: #3a4458;
+    --canvas: #f5f1e8;
+    --canvas-deep: #ecdfca;
+    --canvas-light: #faf8f3;
+    --paper: #fbf8f0;
+    --gold: #b8924c;
+    --gold-deep: #8b6a36;
+    --gold-soft: #d4b87a;
+    --copper: #a86b3c;
+    --rule: #d4cdb8;
+    --rule-soft: #e8e2d2;
+    --rule-dark: #2a3650;
+    --ok: #4a7c59;
+    --warn: #a8460b;
+    --display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Outfit', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --sp-1: .25rem;
+    --sp-2: .5rem;
+    --sp-3: .75rem;
+    --sp-4: 1rem;
+    --sp-5: 1.5rem;
+    --sp-6: 2rem;
+    --sp-7: 3rem;
+    --sp-8: 4rem;
+    --sp-9: 6rem;
+    --sp-10: 8rem;
+    --container: 1320px;
+    --container-narrow: 980px;
+    --container-wide: 1480px;
+    --ease: cubic-bezier(.4, 0, .2, 1);
+    --ease-out: cubic-bezier(.16, 1, .3, 1);
+}
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+.final-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(184, 146, 76, .16), transparent 55%);
+    pointer-events: none;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+::selection {
+    background: var(--gold);
+    color: var(--canvas-light);
+}
+::selection {
+::selection {
+<style>
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/outfit/v15/QGYvz_MVcBeNP4NJuktqQ4E.woff2) format('woff2');
+    unicode-range: U +0100 -02BA, U +02BD -02C5, U +02C7 -02CC, U +02CE -02D7, U +02DD -02FF, U +0304, U +0308, U +0329, U +1D00 -1DBF, U +1E00 -1E9F, U +1EF2 -1EFF, U +2020, U +20A0 -20AB, U +20AD -20C0, U +2113, U +2C60 -2C7F, U + A720-A7FF;
