@@ -1,0 +1,9 @@
+bootstrap:
+  excludes: []
+  pre-deployment-remote-commands: []
+  post-deployment-remote-commands: []
+
+recurring:
+  excludes: []
+  pre-deployment-remote-commands: []
+  post-deployment-remote-commands: []
