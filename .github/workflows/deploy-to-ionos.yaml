@@ -35,6 +35,10 @@ jobs:
       matrix:
         deployment-id: ${{ fromJson(inputs.deployment-ids) }}
     steps:
+      - name: Free disk space
+        run: |
+          df -h && du -sh /* 2>/dev/null | sort -rh | head -20
+      
       - name: Update deployment status
         uses: ionos-deploy-now/project-action@v1
         with:
