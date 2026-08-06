@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investor Package — MANAV Capital Group</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  html, body { height: 100%; }
+  body { display: flex; flex-direction: column; }
+  .viewer-bar {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--sp-3) var(--sp-4);
+    padding: var(--sp-3) clamp(1.25rem, 4vw, 2.5rem);
+    background: var(--canvas-light); border-bottom: 1px solid var(--rule);
+  }
+  .viewer-bar .doc-title { font-family: var(--display); font-size: 1.05rem; flex: 1 1 12rem; min-width: 0; }
+  .viewer-bar .doc-title em { font-style: italic; }
+  .viewer-bar .btn-row { flex: 0 0 auto; }
+  @media (max-width: 640px) {
+    .viewer-bar .logo { order: 1; }
+    .viewer-bar .doc-title { order: 3; flex-basis: 100%; }
+    .viewer-bar .btn-row { order: 2; }
+  }
+  .viewer-frame-wrap { flex: 1; min-height: 0; background: var(--ink-soft); }
+  .viewer-frame-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .viewer-fallback {
+    display: none; flex-direction: column; align-items: center; justify-content: center;
+    height: 100%; gap: var(--sp-4); color: var(--canvas); text-align: center; padding: var(--sp-6);
+  }
+  .no-pdf .viewer-fallback { display: flex; }
+  .no-pdf iframe { display: none; }
+</style>
+</head>
+<body>
+
+<div class="viewer-bar">
+  <a href="index.html" class="logo" aria-label="MANAV Capital Group home">
+    <img class="logo-mark-img" src="assets/logo-icon.png" alt="" style="height:34px;">
+    <span class="logo-word"><span class="l1" style="font-size:.95rem;">MANAV</span><br><span class="l2">Capital Group</span></span>
+  </a>
+  <span class="doc-title">Investor Package — <em>731 N Davis Dr</em></span>
+  <div class="btn-row">
+    <a class="btn btn--outline" href="assets/MANAV-Investor-Package.pdf" download style="padding:.7em 1.2em;">Download PDF</a>
+    <a class="btn btn--primary" href="index.html" style="padding:.7em 1.2em;">Back to Site</a>
+  </div>
+</div>
+
+<div class="viewer-frame-wrap" id="viewerWrap">
+  <iframe src="assets/MANAV-Investor-Package.pdf" title="MANAV Capital Group Investor Package PDF"></iframe>
+  <div class="viewer-fallback">
+    <p>Your browser can't preview PDFs inline.</p>
+    <a class="btn btn--primary" href="assets/MANAV-Investor-Package.pdf" download>Download the Investor Package →</a>
+  </div>
+</div>
+
+<script>
+  // Some in-app/embedded browsers can't render PDFs in an iframe at all —
+  // detect a failed/empty load and fall back to a plain download prompt.
+  (function () {
+    var wrap = document.getElementById('viewerWrap');
+    var frame = wrap.querySelector('iframe');
+    var loaded = false;
+    frame.addEventListener('load', function () { loaded = true; });
+    setTimeout(function () {
+      if (!loaded) wrap.classList.add('no-pdf');
+    }, 2500);
+  })();
+</script>
+</body>
+</html>
