@@ -26,6 +26,8 @@
   <symbol id="i-cap" viewBox="0 0 24 24"><path d="M12 4 L22 9 L12 14 L2 9 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 11 V16 C6 17.5 8.7 19 12 19 C15.3 19 18 17.5 18 16 V11" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
   <symbol id="i-hammer" viewBox="0 0 24 24"><path d="M14.5 6.5 L18 3 L21 6 L17.5 9.5 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 8 L4 18 L6 20 L16 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
   <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="17.5" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M15.5 20c.2-2.6 1.7-4.7 3.8-5.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+  <symbol id="iso-cube" viewBox="-32 -16 64 72"><polygon points="0,-16 32,0 0,16 -32,0" fill="currentColor"/><polygon points="32,0 0,16 0,56 32,40" fill="currentColor" opacity=".7"/><polygon points="-32,0 0,16 0,56 -32,40" fill="currentColor" opacity=".45"/></symbol>
+  <symbol id="iso-tile" viewBox="-32 -16 64 32"><polygon points="0,-16 32,0 0,16 -32,0" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
 </svg>
 
 <div class="topbar">
@@ -353,12 +355,12 @@
           </div>
         </article>
         <article class="pipeline-card">
-          <div class="ph ph--light ar-card" style="position:relative;"><span class="pc-status">Reservations Open</span><svg class="ph-icon" aria-hidden="true"><use href="#i-building"/></svg><span class="ph-label">Build-to-Rent Community</span></div>
+          <div class="ph ph--light ar-card" style="position:relative;"><span class="pc-status">Reservations Open</span><svg class="ph-icon" aria-hidden="true"><use href="#i-building"/></svg><span class="ph-label">Medium Term Rental / Corporate Rentals</span></div>
           <div class="pc-body">
             <div class="pc-loc"><span class="bracket">[City, State]</span></div>
-            <h4>Build-to-Rent <span class="strand">Community</span></h4>
-            <p class="pc-desc">Ground-up single-family rental community designed for long-term resident retention.</p>
-            <div class="pc-foot"><span>8.0% <span class="sample-tag">Sample</span></span><span class="bracket">Long Term</span></div>
+            <h4>Medium Term Rental <span class="strand">/ Corporate Rentals</span></h4>
+            <p class="pc-desc">Full flexibility for tenants, priced up to 2x market rents, in fully equipped, high-quality accommodations.</p>
+            <div class="pc-foot"><span>8.0% <span class="sample-tag">Sample</span></span><span class="bracket">Medium Term</span></div>
           </div>
         </article>
         <article class="pipeline-card">
@@ -483,14 +485,43 @@
 
   <!-- ================= SIGNATURE STATEMENT ================= -->
   <section class="statement on-dark">
-    <svg class="touchmark" viewBox="0 0 200 200" aria-hidden="true">
-      <circle cx="100" cy="100" r="98" fill="none" stroke="#b4863d" stroke-width="1"/>
-      <circle cx="100" cy="100" r="78" fill="none" stroke="#b4863d" stroke-width="1"/>
-      <circle cx="112" cy="92" r="46" fill="none" stroke="#b4863d" stroke-width="1"/>
-    </svg>
-    <div class="container reveal">
-      <h2>The most <em>disciplined combination</em> in residential real estate.</h2>
-      <p>Renovation, repositioning, and short-term management aren't three separate businesses bolted together — they're the same operating discipline, applied on three different timelines.</p>
+    <div class="container statement-grid reveal">
+      <div class="statement-copy">
+        <h2>The most <em>disciplined combination</em> in residential real estate.</h2>
+        <p>Renovation, repositioning, and short-term management aren't three separate businesses bolted together — they're the same operating discipline, applied on three different timelines.</p>
+      </div>
+      <div class="statement-art">
+        <svg viewBox="-150 -120 300 260" aria-hidden="true">
+          <!-- flat grid tiles -->
+          <g color="#3a4458" opacity=".6">
+            <use href="#iso-tile" transform="translate(0,-32)"/>
+            <use href="#iso-tile" transform="translate(-64,0)"/>
+            <use href="#iso-tile" transform="translate(32,-16)"/>
+            <use href="#iso-tile" transform="translate(-32,16)"/>
+            <use href="#iso-tile" transform="translate(64,0)"/>
+            <use href="#iso-tile" transform="translate(0,32)"/>
+          </g>
+          <!-- elevated strategy blocks -->
+          <g color="#d9bc84"><use href="#iso-cube" transform="translate(-32,-16)"/></g>
+          <g color="#b4863d"><use href="#iso-cube" transform="translate(0,0)"/></g>
+          <g color="#a35d3f"><use href="#iso-cube" transform="translate(32,16)"/></g>
+          <text x="-32" y="54" class="art-label">Renovate</text>
+          <text x="0" y="70" class="art-label">Reposition</text>
+          <text x="32" y="86" class="art-label">Manage</text>
+          <!-- compass -->
+          <g transform="translate(100,-70)" stroke="#b4863d" fill="none" stroke-width="1.3">
+            <circle r="28"/>
+            <path d="M0,-28 V-34 M0,28 V34 M-28,0 H-34 M28,0 H34"/>
+            <path d="M0,-16 L6,0 L0,16 L-6,0 Z" fill="#b4863d" stroke="none"/>
+          </g>
+          <!-- target -->
+          <g transform="translate(-100,70)" stroke="#8a6529" fill="none" stroke-width="1.3">
+            <circle r="26"/>
+            <circle r="16"/>
+            <circle r="6" fill="#8a6529" stroke="none"/>
+          </g>
+        </svg>
+      </div>
     </div>
   </section>
 

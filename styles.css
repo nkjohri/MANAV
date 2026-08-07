@@ -510,12 +510,23 @@ header.site{
 @media (min-width:960px){ .why-lede{ grid-template-columns:auto 1fr; gap:var(--sp-7); } }
 
 /* signature statement panel */
-.statement{ background:var(--ink); color:var(--canvas); padding-block:var(--sp-9); text-align:center; position:relative; overflow:hidden; }
-.statement::before{ content:""; position:absolute; inset:0; background:radial-gradient(circle at 50% 0%, rgba(180,134,61,.14), transparent 55%); pointer-events:none; }
-.statement .container{ position:relative; }
-.statement h2{ color:var(--canvas); font-size:clamp(1.9rem,4.4vw,3rem); max-width:46rem; margin-inline:auto; }
+.statement{ background:var(--ink); color:var(--canvas); padding-block:var(--sp-9); position:relative; overflow:hidden; }
+.statement::before{ content:""; position:absolute; inset:0; background:radial-gradient(circle at 15% 15%, rgba(180,134,61,.14), transparent 55%); pointer-events:none; }
+.statement-grid{ position:relative; display:grid; grid-template-columns:1fr; gap:var(--sp-8); align-items:center; text-align:center; }
+.statement h2{ color:var(--canvas); font-size:clamp(1.9rem,4.4vw,2.7rem); max-width:26rem; margin-inline:auto; }
 .statement .accent-italic{ color:var(--gold); }
-.statement p{ margin-top:var(--sp-4); color:#c3cbdb; max-width:38rem; margin-inline:auto; }
+.statement p{ margin-top:var(--sp-4); color:#c3cbdb; max-width:34rem; margin-inline:auto; }
+.statement-art{ display:flex; justify-content:center; }
+.statement-art svg{ width:100%; max-width:360px; height:auto; }
+.art-label{
+  font-family:var(--mono); font-size:8.5px; letter-spacing:.06em; text-transform:uppercase; font-weight:700;
+  fill:#c3cbdb; text-anchor:middle;
+}
+@media (min-width:900px){
+  .statement-grid{ grid-template-columns:1fr 1fr; text-align:left; }
+  .statement h2, .statement p{ margin-inline:0; }
+  .statement-art svg{ max-width:420px; }
+}
 
 /* ============================================================
    WHY MANAV CHECKLIST
@@ -712,6 +723,47 @@ footer.site{ background:var(--canvas-deep); padding-top:var(--sp-9); }
 .archive-grid{ margin-top:var(--sp-7); display:grid; grid-template-columns:1fr; gap:var(--sp-4); }
 @media (min-width:640px){ .archive-grid{ grid-template-columns:repeat(2,1fr); } }
 @media (min-width:960px){ .archive-grid{ grid-template-columns:repeat(3,1fr); } }
+
+.pf-link{
+  font-family:inherit; font-size:inherit; color:var(--gold-deep); font-weight:600;
+  text-decoration:underline; text-underline-offset:2px; cursor:pointer;
+}
+.pf-link:hover{ color:var(--ink); }
+
+/* ============================================================
+   PROJECT DETAILS MODAL (archive.html)
+   ============================================================ */
+.project-modal{
+  border:0; padding:0; max-width:640px; width:calc(100% - 2.5rem);
+  background:var(--paper); color:var(--ink);
+  box-shadow:0 20px 60px rgba(16,25,43,.35);
+  /* our global reset zeroes the UA margin:auto dialogs rely on for
+     centering, so position it explicitly instead */
+  position:fixed; top:50%; left:50%; margin:0; transform:translate(-50%,-50%);
+}
+.project-modal::backdrop{ background:rgba(16,25,43,.72); }
+.pm-inner{ position:relative; max-height:85vh; overflow-y:auto; }
+.pm-close{
+  position:absolute; top:var(--sp-4); right:var(--sp-4); z-index:2;
+  width:36px; height:36px; border-radius:50%; background:var(--canvas-light);
+  border:1px solid var(--rule); display:flex; align-items:center; justify-content:center;
+  color:var(--ink); transition:background .18s var(--ease), color .18s var(--ease);
+}
+.pm-close:hover{ background:var(--ink); color:var(--canvas); }
+.pm-photo{ aspect-ratio:16/9; background:var(--canvas-deep); overflow:hidden; }
+.pm-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+.pm-body{ padding:var(--sp-6); }
+.pm-body h3{ font-size:1.5rem; margin-top:.35rem; }
+.pm-loc{ font-family:var(--mono); font-size:.75rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-mute); margin-top:.3rem; }
+
+.pm-specs{ display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-3); margin-top:var(--sp-5); padding:var(--sp-4) 0; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); }
+.pm-spec{ display:flex; flex-direction:column; align-items:center; gap:.35rem; text-align:center; color:var(--gold-deep); }
+.pm-spec span{ font-family:var(--display); font-size:1.3rem; color:var(--ink); }
+.pm-spec label{ font-family:var(--mono); font-size:.62rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-mute); }
+
+.pm-section{ margin-top:var(--sp-5); }
+.pm-section h5{ font-family:var(--mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-deep); font-weight:700; }
+.pm-placeholder{ margin-top:.4rem; color:var(--ink-mute); font-style:italic; font-size:.92rem; }
 
 /* ============================================================
    BLOG — index (blog.html) + article pages
